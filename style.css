@@ -2,7 +2,7 @@ body {
   background-color: antiquewhite;
   text-align: center;
 }
-#cont {
+#xc {
   width: 700px;
   margin: auto;
   display: grid;
@@ -14,7 +14,7 @@ body {
   user-select: none;
 }
 
-#cont div {
+#xc div {
   background-color: aqua;
   border-radius: 5px;
   box-shadow: 1px 1px 3px black;
@@ -24,7 +24,7 @@ body {
   height: 20px;
   color: rgb(134, 26, 26);
 }
-#cont div:hover {
+#xc div:hover {
   background-color: rgb(115, 170, 170);
 }
 h1 {
