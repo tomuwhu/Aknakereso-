@@ -1,21 +1,18 @@
-m = 10
-n = 15
-k = 20
-end = false
+var [m, n, k, end, o] = [10, 15, 20, false, "&nbsp; &nbsp;"]
 const ih = i => document.getElementById(`x${i}`)
-var l = Array(k).fill(" * ").concat(Array(m * n - k).fill(" - "))
-l.sort((a, b) => Math.random() - .5).sort((a, b) => Math.random() - .5)
-const g = (i, event) => {
-  if (ih(i).innerHTML == "&nbsp; &nbsp;") {
+var l = Array(k)
+        .fill(" * ").concat(Array(m * n - k).fill(" - "))
+        .sort((a, b) => Math.random() - .5).sort((a, b) => Math.random() - .5)
+const g = (i, e) => {
+  if (ih(i).innerHTML == o) {
     ih(i).innerHTML = "📍"
     ih(i).style.backgroundColor="rgb(255,170,184)"
   }
   else {
-    ih(i).innerHTML = "&nbsp; &nbsp;"
+    ih(i).innerHTML = o
     ih(i).style.backgroundColor="aqua"
   }
-  event.preventDefault()
-  return false
+  e.preventDefault()
 }
 const f = i => {
   if (end) return true
