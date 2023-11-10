@@ -1,4 +1,4 @@
-var [m, n, k, end, o] = [10, 15, 20, false, "&nbsp; &nbsp;"]
+var [m, n, k, end, o] = [12, 17, 20, false, "&nbsp; &nbsp;"]
 const ih = i => document.getElementById(`x${i}`)
 var l = Array(k)
         .fill(" * ").concat(Array(m * n - k).fill(" - "))
@@ -43,4 +43,6 @@ const main = () => {
   <div  id="x${i}" onclick="f(${i})" 
         oncontextmenu="g(${i}, event)"
   >&nbsp;${v[0]}&nbsp;</div>`).join("")
+  ih('c').style.gridTemplateColumns = `repeat(${n}, 1fr)`
+  ih('c').style.width=`${n * 47}px`;
 }

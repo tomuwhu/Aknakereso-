@@ -3,10 +3,8 @@ body {
   text-align: center;
 }
 #xc {
-  width: 700px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
   grid-gap: 5px;
   background-color: azure;
   padding: 10px;
