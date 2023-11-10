@@ -1,0 +1,32 @@
+body {
+  background-color: antiquewhite;
+  text-align: center;
+}
+#cont {
+  width: 700px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-gap: 5px;
+  background-color: azure;
+  padding: 10px;
+  border-radius: 10px;
+  user-select: none;
+}
+
+#cont div {
+  background-color: aqua;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px black;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  height: 20px;
+  color: rgb(134, 26, 26);
+}
+#cont div:hover {
+  background-color: rgb(115, 170, 170);
+}
+h1 {
+  color: rgb(33, 95, 101);
+}
