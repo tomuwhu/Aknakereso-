@@ -2,7 +2,7 @@ m = 10
 n = 15
 k = 20
 end = false
-const ih = (i) => document.getElementById(`x${i}`)
+const ih = i => document.getElementById(`x${i}`)
 var l = Array(k).fill(" * ").concat(Array(m * n - k).fill(" - "))
 l.sort((a, b) => Math.random() - .5).sort((a, b) => Math.random() - .5)
 const g = (i, event) => {
