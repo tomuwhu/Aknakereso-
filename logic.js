@@ -1,4 +1,4 @@
-var [m, n, k, end, o] = [12, 17, 20, false, "&nbsp; &nbsp;"]
+var [m, n, k, end, o] = [12, 17, 30, false, "&nbsp; &nbsp;"]
 const ih = i => document.getElementById(`x${i}`)
 var l = Array(k)
         .fill(" * ").concat(Array(m * n - k).fill(" - "))
@@ -24,7 +24,7 @@ const f = i => {
   } else {
     kosz = 0
     szl = i % n == 0  ? [-n, -n + 1, 1, n, n + 1] :
-          i % n == 14 ? [-n - 1, -n, -1, n - 1, n] :
+          i % n == n - 1 ? [-n - 1, -n, -1, n - 1, n] :
           [-n - 1, -n, -n + 1, -1, 1, n - 1, n, n + 1]
     szl.forEach(v => 
       (i + v >= 0 && i + v < n * m && l[i + v][1] == "*") ? kosz++ : 0
