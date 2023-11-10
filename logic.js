@@ -44,5 +44,6 @@ const f = i => {
   }
 }
 const main = () => {
-  document.getElementById("cont").innerHTML = l.map((v, i) => `<div id="x${i}" onclick="f(${i})" oncontextmenu="g(${i}, event)">&nbsp;${v[0]}&nbsp;</div>`).join("")
+  document.getElementById("cont").innerHTML = l.map((v, i) =>
+    `<div id="x${i}" onclick="f(${i})" oncontextmenu="g(${i}, event)">&nbsp;${v[0]}&nbsp;</div>`).join("")
 }
