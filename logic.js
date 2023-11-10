@@ -33,8 +33,7 @@ const f = i => {
     ih(i).style.backgroundColor =
       `rgb(${120 + kosz * 30},${250 - kosz * 30},134)`
     l[i] = kosz + "-" + l[i][2]
-    if (kosz == 0)
-    szl.forEach(v => {
+    if (kosz == 0) szl.forEach(v => {
       if (i + v >= 0 && i + v < n * m && l[i + v][0] == " ") f(i + v)
     })
   }
