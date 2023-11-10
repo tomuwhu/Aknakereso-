@@ -20,18 +20,15 @@ const f = i => {
     ih(i).innerHTML = "💣"
     ih(i).style.backgroundColor="red"
     end = true
-    l.forEach((v, i) => { 
-      if (v[1] == "*") ih(i).innerHTML = "💣"
-    })
-  }
-  else {
+    l.forEach((v, i) => ih(i).innerHTML = v[1] == "*" ?  "💣" : ih(i).innerHTML)
+  } else {
     kosz = 0
     szl = [-n - 1, -n, -n + 1, -1, 1, n - 1, n, n + 1]
     if (i % n == 0) szl = [-n, -n + 1, 1, n, n + 1]
     if (i % n == 14) szl = [-n - 1, -n, -1, n - 1, n]
-    szl.forEach(v => {
-      if (i + v >= 0 && i + v < n * m && l[i + v][1] == "*") kosz++
-    })
+    szl.forEach(v => 
+      (i + v >= 0 && i + v < n * m && l[i + v][1] == "*") ? kosz++ : 0
+    )
     ih(i).innerHTML = kosz
     ih(i).style.backgroundColor =
       `rgb(${120 + kosz * 30},${250 - kosz * 30},134)`
@@ -44,8 +41,7 @@ const f = i => {
 }
 const main = () => {
   ih('c').innerHTML = l.map((v, i) => `
-  <div  id="x${i}" 
-        onclick="f(${i})" 
+  <div  id="x${i}" onclick="f(${i})" 
         oncontextmenu="g(${i}, event)"
   >&nbsp;${v[0]}&nbsp;</div>`).join("")
 }
