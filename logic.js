@@ -36,7 +36,8 @@ const f = i => {
       if (i + v >= 0 && i + v < n * m && l[i + v][1] == "*") kosz++
     })
     ih(i).innerHTML = kosz
-    ih(i).style.backgroundColor = `rgb(${120 + kosz * 30},${250 - kosz * 30},134)`
+    ih(i).style.backgroundColor =
+      `rgb(${120 + kosz * 30},${250 - kosz * 30},134)`
     l[i] = kosz + "-" + l[i][2]
     if (kosz == 0)
     szl.forEach(v => {
