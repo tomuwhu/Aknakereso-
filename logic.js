@@ -23,9 +23,9 @@ const f = i => {
     l.forEach((v, i) => ih(i).innerHTML = v[1] == "*" ?  "💣" : ih(i).innerHTML)
   } else {
     kosz = 0
-    szl = [-n - 1, -n, -n + 1, -1, 1, n - 1, n, n + 1]
-    if (i % n == 0) szl = [-n, -n + 1, 1, n, n + 1]
-    if (i % n == 14) szl = [-n - 1, -n, -1, n - 1, n]
+    szl = i % n == 0  ? [-n, -n + 1, 1, n, n + 1] :
+          i % n == 14 ? [-n - 1, -n, -1, n - 1, n] :
+          [-n - 1, -n, -n + 1, -1, 1, n - 1, n, n + 1]
     szl.forEach(v => 
       (i + v >= 0 && i + v < n * m && l[i + v][1] == "*") ? kosz++ : 0
     )
