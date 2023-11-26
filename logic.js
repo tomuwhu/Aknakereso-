@@ -5,14 +5,13 @@ var l = Array(k)
         .sort((a, b) => Math.random() - .5).sort((a, b) => Math.random() - .5)
 const g = (i, e) => {
   e.preventDefault()
-  if (end) return true
+  if (end) return
   if (ih(i).innerHTML == o) {
     ih(i).innerHTML = "📍"
     ih(i).style.backgroundColor = "rgb(255,170,184)"
     q2++
     if (l[i][1] == "*") q++
-  }
-  else {
+  } else {
     ih(i).innerHTML = o
     ih(i).style.backgroundColor = "aqua"
     q2--
@@ -23,12 +22,13 @@ const g = (i, e) => {
     document.getElementById(`ny`).innerHTML="Nyert!"
   }
 }
+const h = e => e.preventDefault()
 const f = i => {
-  if (end) return true
+  if (end) return
   if (l[i][1] == "*") {
     ih(i).innerHTML = "💣"
     ih(i).style.backgroundColor="red"
-    end = true
+    end = 1
     document.getElementById(`ny`).innerHTML="Veszített!"
     l.forEach((v, i) => ih(i).innerHTML = v[1] == "*" ?  "💣" : ih(i).innerHTML)
   } else {
